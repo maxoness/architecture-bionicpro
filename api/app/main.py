@@ -36,9 +36,9 @@ setup.setup_keycloak_middleware(
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=[settings.FRONT_URL],
+    allow_methods=["GET","POST","OPTIONS"],
+    allow_headers=["Accept","Accept-language","Authorization","Content-Type","Origin"],
 )
 
 app.include_router(api_router, prefix=settings.APIVersion)

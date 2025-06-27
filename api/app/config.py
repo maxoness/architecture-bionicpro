@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     KEYCLOAK_REALM: str = "reports-realm"
     KEYCLOAK_CLIENT_ID: str = "client_id"
     KEYCLOAK_CLIENT_SECRET: str = "secret"
+    FRONT_URL: str = "htt://localhost:3000"
 
 
 settings = Settings()
